@@ -1,16 +1,11 @@
 ## Official disclaimer
 Scratch and ScratchJr are trademarks of Massachusetts Institute of Technology, which does not sponsor, endorse, or authorize this content. See scratchjr.org for more information.
 
-## Downloads 
-[Download ScratchJr for Desktop](https://jfo8000.github.io/ScratchJr-Desktop/)
 
 
-## The geeky stuff
+## stuff
 
-This repository contains a port of ScratchJr for Desktop. 
-
-It has been ported with love from the iPad / Android editions to Mac/Windows
-as an independent, open source community project.
+This repository contains a mod of scratchJr called free food
 
 
 If you are looking for the Official ScratchJr build from MIT for Android and iPad, visit
@@ -18,33 +13,12 @@ the LLK/ScratchJr (https://github.com/LLK/scratchjr) repository.
 
 ## About Electron and Electron Forge
 
-This port makes use of Electron to host the ScratchJR HTML5 application on Mac and Windows.
+This makes use of Electron to host the ScratchJR HTML5 application on Mac and Windows.
 
 Electron (https://electronjs.org/) is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS.   
 
 Electron Forge (https://electronforge.io/) stitches together several electron modules to provide easier support for using the latest version 
 of javascript, making dmg/exe files and installers.     
-
-
-## Architecture Overview
-
-![Scratch Jr. Architecture Diagram](docs/scratchjr_electron_overview.png)
-
-* The HTML5 side of Scratch Jr very close to the original ios / android versions.  Some changes had to be made to load modules correctly inside of the electron environment.  
-* Minor changes were made to the CSS stylesheets to support resizing.
-* Touch events were translated to mouse events.
-
- 
-## ElectronDesktopInterface as a third tabletInterface
-
-The original html implementation called out to a tabletInterface to make calls to 
-the host operating system (Android / iOS) for filesystem access and audio and video recording.
-
- 
-ElectronDesktopInterface handles these calls and either handles them itself in HTML5 
-(e.g. audio and video recording are achieved through the HTML5 WebRTC apis) or passes them
-onto the electron main process to read and write files / db.
-
 
  
 ## Sql.js 
